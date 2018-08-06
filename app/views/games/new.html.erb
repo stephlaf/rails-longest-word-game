@@ -1,0 +1,14 @@
+<h1>Let's play!</h1>
+<% @letters.each do |letter| %>
+  <span><%= letter %> </span>
+<% end %>
+
+<form action="/score" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :letters, @letters %>
+  <%= hidden_field_tag :start, Time.now %>
+  <p>Your best shot:</p>
+  <input type="text" name="word" placeholder="Ohhh, what you got?">
+  <input type="submit" value="Do it!">
+  <%= hidden_field_tag :end, Time.now %>
+</form>
