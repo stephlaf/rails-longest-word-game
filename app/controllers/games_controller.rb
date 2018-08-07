@@ -36,11 +36,8 @@ def validate_to_grid
 end
 
 def calc_score
-  @start = params[:start]
-  time = 1
-  # @end - @start
-  # raise
-  (params[:word].size.to_f * 10) - (time)
+  time =  @end - params[:start].to_time
+  (params[:word].size.to_f * 10) - (time.floor)
 end
 
 def results

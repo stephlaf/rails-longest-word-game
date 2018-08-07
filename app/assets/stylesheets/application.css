@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  background-color: rgb(245, 245, 245);
+}
+.test {
+  margin-top: 20px;
+}
+.letter {
+  width: 30px;
+  padding: 5px;
+  margin : 3px;
+  background-color: blue;
+  color: white;
+  text-align: center;
+} 
+.word {
+  /*margin-top: 10px;*/
+}
+form > p {
+  margin-top: 10px;
+}
